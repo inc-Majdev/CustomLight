@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CustomLight")]
+[assembly: AssemblyTitle("Custom Light")]
 [assembly: AssemblyDescription("Forget the old-fashioned software the manufacturer gave you to manage the lights and discover the magic of lights with us!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Majdev Inc.")]
-[assembly: AssemblyProduct("CustomLight")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyProduct("Custom Light")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("Developed by Majdev")]
 [assembly: AssemblyCulture("")]
 

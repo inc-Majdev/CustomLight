@@ -29,722 +29,707 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            MaterialSkin.Controls.MaterialLabel ColorBlueLabel;
-            MaterialSkin.Controls.MaterialLabel ColorGreenLabel;
+            MaterialSkin.Controls.MaterialLabel lblColorBlue;
+            MaterialSkin.Controls.MaterialLabel lblColorGreen;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.TabControl = new MaterialSkin.Controls.MaterialTabControl();
-            this.TabManageLights = new System.Windows.Forms.TabPage();
-            this.BrightnessBreathing = new MaterialSkin.Controls.MaterialSlider();
-            this.RunAtStartup = new MaterialSkin.Controls.MaterialCheckbox();
-            this.ModeTabControl = new System.Windows.Forms.TabControl();
-            this.TabStaticMode = new System.Windows.Forms.TabPage();
-            this.Brightness = new MaterialSkin.Controls.MaterialSlider();
-            this.SaveButton = new MaterialSkin.Controls.MaterialButton();
-            this.AutoSaveSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.ColorHexLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.CurrentLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.HexColorTextbox = new MaterialSkin.Controls.MaterialTextBox2();
-            this.MaterialDivider = new MaterialSkin.Controls.MaterialDivider();
-            this.CurrentColor = new System.Windows.Forms.Label();
-            this.ColorPickerMode = new MaterialSkin.Controls.MaterialTabControl();
-            this.TabHexagon = new System.Windows.Forms.TabPage();
-            this.ColorHexagon = new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon();
-            this.TabWheel = new System.Windows.Forms.TabPage();
-            this.ColorWheel = new MechanikaDesign.WinForms.UI.ColorPicker.ColorWheel();
-            this.TabColorCode = new System.Windows.Forms.TabPage();
-            this.ColorGreenCode = new MaterialSkin.Controls.MaterialTextBox2();
-            this.ColorBlueCode = new MaterialSkin.Controls.MaterialTextBox2();
-            this.ColorRedLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.ColorRedCode = new MaterialSkin.Controls.MaterialTextBox2();
-            this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
-            this.TabAnimationMode = new System.Windows.Forms.TabPage();
-            this.ColorFlashHexagon = new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon();
-            this.AnimationSpeed = new MaterialSkin.Controls.MaterialSlider();
-            this.AnimationSelector = new MaterialSkin.Controls.MaterialComboBox();
-            this.ModeSelector = new MaterialSkin.Controls.MaterialComboBox();
-            this.TabAbout = new System.Windows.Forms.TabPage();
-            this.ProtectionLoop = new System.Windows.Forms.Timer(this.components);
-            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.WorkBackground = new System.Windows.Forms.Timer(this.components);
-            this.CheckAnimation = new System.ComponentModel.BackgroundWorker();
-            this.Breathing = new System.Windows.Forms.Timer(this.components);
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.ExpansionAbout4Panel = new MaterialSkin.Controls.MaterialExpansionPanel();
-            this.AboutLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.DeveloperLabel = new System.Windows.Forms.Label();
-            ColorBlueLabel = new MaterialSkin.Controls.MaterialLabel();
-            ColorGreenLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.TabControl.SuspendLayout();
-            this.TabManageLights.SuspendLayout();
-            this.ModeTabControl.SuspendLayout();
-            this.TabStaticMode.SuspendLayout();
-            this.ColorPickerMode.SuspendLayout();
-            this.TabHexagon.SuspendLayout();
-            this.TabWheel.SuspendLayout();
-            this.TabColorCode.SuspendLayout();
-            this.TabAnimationMode.SuspendLayout();
-            this.TabAbout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.ExpansionAbout4Panel.SuspendLayout();
+            this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
+            this.tabManageLights = new System.Windows.Forms.TabPage();
+            this.switchKeyboardLight = new MaterialSkin.Controls.MaterialSwitch();
+            this.checkRunStartup = new MaterialSkin.Controls.MaterialCheckbox();
+            this.checkRunBackground = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tabMode = new System.Windows.Forms.TabControl();
+            this.tabStaticMode = new System.Windows.Forms.TabPage();
+            this.sliderBrightness = new MaterialSkin.Controls.MaterialSlider();
+            this.lblColorHex = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrent = new MaterialSkin.Controls.MaterialLabel();
+            this.txtHexColor = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialDivider = new MaterialSkin.Controls.MaterialDivider();
+            this.lblCurrentColor = new System.Windows.Forms.Label();
+            this.colorPickerMode = new MaterialSkin.Controls.MaterialTabControl();
+            this.tabHexagon = new System.Windows.Forms.TabPage();
+            this.colorHexagon = new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon();
+            this.tabWheel = new System.Windows.Forms.TabPage();
+            this.colorWheel = new MechanikaDesign.WinForms.UI.ColorPicker.ColorWheel();
+            this.tabColorCode = new System.Windows.Forms.TabPage();
+            this.txtColorGreenCode = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtColorBlueCode = new MaterialSkin.Controls.MaterialTextBox2();
+            this.lblColorRed = new MaterialSkin.Controls.MaterialLabel();
+            this.txtColorRedCode = new MaterialSkin.Controls.MaterialTextBox2();
+            this.tabSelector = new MaterialSkin.Controls.MaterialTabSelector();
+            this.tabAnimationMode = new System.Windows.Forms.TabPage();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.trackAnimationSpeed = new System.Windows.Forms.TrackBar();
+            this.colorCustomHexagon = new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon();
+            this.txtAnimationSelector = new MaterialSkin.Controls.MaterialComboBox();
+            this.txtModeSelector = new MaterialSkin.Controls.MaterialComboBox();
+            this.tabAbout = new System.Windows.Forms.TabPage();
+            this.panelAbout = new MaterialSkin.Controls.MaterialExpansionPanel();
+            this.lblDeveloper = new System.Windows.Forms.Label();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.lblAbout = new MaterialSkin.Controls.MaterialLabel();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkDefaultSettings = new MaterialSkin.Controls.MaterialCheckbox();
+            lblColorBlue = new MaterialSkin.Controls.MaterialLabel();
+            lblColorGreen = new MaterialSkin.Controls.MaterialLabel();
+            this.tabControl.SuspendLayout();
+            this.tabManageLights.SuspendLayout();
+            this.tabMode.SuspendLayout();
+            this.tabStaticMode.SuspendLayout();
+            this.colorPickerMode.SuspendLayout();
+            this.tabHexagon.SuspendLayout();
+            this.tabWheel.SuspendLayout();
+            this.tabColorCode.SuspendLayout();
+            this.tabAnimationMode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackAnimationSpeed)).BeginInit();
+            this.tabAbout.SuspendLayout();
+            this.panelAbout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
+            this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ColorBlueLabel
+            // lblColorBlue
             // 
-            ColorBlueLabel.AutoSize = true;
-            ColorBlueLabel.Depth = 0;
-            ColorBlueLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            ColorBlueLabel.Location = new System.Drawing.Point(20, 185);
-            ColorBlueLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            ColorBlueLabel.Name = "ColorBlueLabel";
-            ColorBlueLabel.Size = new System.Drawing.Size(36, 19);
-            ColorBlueLabel.TabIndex = 75;
-            ColorBlueLabel.Text = "Blue:";
+            lblColorBlue.AutoSize = true;
+            lblColorBlue.Depth = 0;
+            lblColorBlue.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblColorBlue.Location = new System.Drawing.Point(20, 185);
+            lblColorBlue.MouseState = MaterialSkin.MouseState.HOVER;
+            lblColorBlue.Name = "lblColorBlue";
+            lblColorBlue.Size = new System.Drawing.Size(36, 19);
+            lblColorBlue.TabIndex = 75;
+            lblColorBlue.Text = "Blue:";
             // 
-            // ColorGreenLabel
+            // lblColorGreen
             // 
-            ColorGreenLabel.AutoSize = true;
-            ColorGreenLabel.Depth = 0;
-            ColorGreenLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            ColorGreenLabel.Location = new System.Drawing.Point(20, 102);
-            ColorGreenLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            ColorGreenLabel.Name = "ColorGreenLabel";
-            ColorGreenLabel.Size = new System.Drawing.Size(46, 19);
-            ColorGreenLabel.TabIndex = 77;
-            ColorGreenLabel.Text = "Green:";
+            lblColorGreen.AutoSize = true;
+            lblColorGreen.Depth = 0;
+            lblColorGreen.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            lblColorGreen.Location = new System.Drawing.Point(20, 102);
+            lblColorGreen.MouseState = MaterialSkin.MouseState.HOVER;
+            lblColorGreen.Name = "lblColorGreen";
+            lblColorGreen.Size = new System.Drawing.Size(46, 19);
+            lblColorGreen.TabIndex = 77;
+            lblColorGreen.Text = "Green:";
             // 
-            // TabControl
+            // tabControl
             // 
-            this.TabControl.Controls.Add(this.TabManageLights);
-            this.TabControl.Controls.Add(this.TabAbout);
-            this.TabControl.Depth = 0;
-            this.TabControl.Location = new System.Drawing.Point(-5, 72);
-            this.TabControl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TabControl.Multiline = true;
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1019, 706);
-            this.TabControl.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabManageLights);
+            this.tabControl.Controls.Add(this.tabAbout);
+            this.tabControl.Depth = 0;
+            this.tabControl.Location = new System.Drawing.Point(-5, 72);
+            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1019, 706);
+            this.tabControl.TabIndex = 0;
             // 
-            // TabManageLights
+            // tabManageLights
             // 
-            this.TabManageLights.BackColor = System.Drawing.Color.White;
-            this.TabManageLights.Controls.Add(this.BrightnessBreathing);
-            this.TabManageLights.Controls.Add(this.RunAtStartup);
-            this.TabManageLights.Controls.Add(this.ModeTabControl);
-            this.TabManageLights.Controls.Add(this.ModeSelector);
-            this.TabManageLights.Location = new System.Drawing.Point(4, 22);
-            this.TabManageLights.Name = "TabManageLights";
-            this.TabManageLights.Padding = new System.Windows.Forms.Padding(3);
-            this.TabManageLights.Size = new System.Drawing.Size(1011, 680);
-            this.TabManageLights.TabIndex = 0;
-            this.TabManageLights.Text = "Manage Lights";
+            this.tabManageLights.BackColor = System.Drawing.Color.White;
+            this.tabManageLights.Controls.Add(this.checkDefaultSettings);
+            this.tabManageLights.Controls.Add(this.switchKeyboardLight);
+            this.tabManageLights.Controls.Add(this.checkRunStartup);
+            this.tabManageLights.Controls.Add(this.checkRunBackground);
+            this.tabManageLights.Controls.Add(this.tabMode);
+            this.tabManageLights.Controls.Add(this.txtModeSelector);
+            this.tabManageLights.Location = new System.Drawing.Point(4, 22);
+            this.tabManageLights.Name = "tabManageLights";
+            this.tabManageLights.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageLights.Size = new System.Drawing.Size(1011, 680);
+            this.tabManageLights.TabIndex = 0;
+            this.tabManageLights.Text = "Manage Lights";
             // 
-            // BrightnessBreathing
+            // switchKeyboardLight
             // 
-            this.BrightnessBreathing.Depth = 0;
-            this.BrightnessBreathing.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.BrightnessBreathing.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.BrightnessBreathing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BrightnessBreathing.Location = new System.Drawing.Point(32767, 32767);
-            this.BrightnessBreathing.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BrightnessBreathing.Name = "BrightnessBreathing";
-            this.BrightnessBreathing.RangeMax = 255;
-            this.BrightnessBreathing.ShowValue = false;
-            this.BrightnessBreathing.Size = new System.Drawing.Size(363, 40);
-            this.BrightnessBreathing.TabIndex = 83;
-            this.BrightnessBreathing.Text = "";
-            this.BrightnessBreathing.Value = 255;
-            this.BrightnessBreathing.ValueMax = 255;
-            this.BrightnessBreathing.Visible = false;
+            this.switchKeyboardLight.AutoSize = true;
+            this.switchKeyboardLight.Depth = 0;
+            this.switchKeyboardLight.Location = new System.Drawing.Point(32, 70);
+            this.switchKeyboardLight.Margin = new System.Windows.Forms.Padding(0);
+            this.switchKeyboardLight.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchKeyboardLight.MouseState = MaterialSkin.MouseState.HOVER;
+            this.switchKeyboardLight.Name = "switchKeyboardLight";
+            this.switchKeyboardLight.Ripple = true;
+            this.switchKeyboardLight.Size = new System.Drawing.Size(165, 37);
+            this.switchKeyboardLight.TabIndex = 86;
+            this.switchKeyboardLight.Text = "Keyboard Light";
+            this.switchKeyboardLight.UseVisualStyleBackColor = true;
+            this.switchKeyboardLight.CheckedChanged += new System.EventHandler(this.switchKeyboardLight_CheckedChanged);
             // 
-            // RunAtStartup
+            // checkRunStartup
             // 
-            this.RunAtStartup.AutoSize = true;
-            this.RunAtStartup.Checked = true;
-            this.RunAtStartup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.RunAtStartup.Depth = 0;
-            this.RunAtStartup.Location = new System.Drawing.Point(841, 70);
-            this.RunAtStartup.Margin = new System.Windows.Forms.Padding(0);
-            this.RunAtStartup.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.RunAtStartup.MouseState = MaterialSkin.MouseState.HOVER;
-            this.RunAtStartup.Name = "RunAtStartup";
-            this.RunAtStartup.ReadOnly = false;
-            this.RunAtStartup.Ripple = true;
-            this.RunAtStartup.Size = new System.Drawing.Size(137, 37);
-            this.RunAtStartup.TabIndex = 2;
-            this.RunAtStartup.Text = "Run at Startup";
-            this.RunAtStartup.UseVisualStyleBackColor = true;
-            this.RunAtStartup.CheckedChanged += new System.EventHandler(this.RunAtStartup_CheckedChanged);
+            this.checkRunStartup.AutoSize = true;
+            this.checkRunStartup.Depth = 0;
+            this.checkRunStartup.Location = new System.Drawing.Point(660, 70);
+            this.checkRunStartup.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRunStartup.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkRunStartup.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkRunStartup.Name = "checkRunStartup";
+            this.checkRunStartup.ReadOnly = false;
+            this.checkRunStartup.Ripple = true;
+            this.checkRunStartup.Size = new System.Drawing.Size(137, 37);
+            this.checkRunStartup.TabIndex = 85;
+            this.checkRunStartup.Text = "Run at Startup";
+            this.checkRunStartup.UseVisualStyleBackColor = true;
+            this.checkRunStartup.CheckedChanged += new System.EventHandler(this.checkRunStartup_CheckedChanged);
             // 
-            // ModeTabControl
+            // checkRunBackground
             // 
-            this.ModeTabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.ModeTabControl.Controls.Add(this.TabStaticMode);
-            this.ModeTabControl.Controls.Add(this.TabAnimationMode);
-            this.ModeTabControl.Location = new System.Drawing.Point(-143, 110);
-            this.ModeTabControl.Multiline = true;
-            this.ModeTabControl.Name = "ModeTabControl";
-            this.ModeTabControl.SelectedIndex = 0;
-            this.ModeTabControl.Size = new System.Drawing.Size(1234, 615);
-            this.ModeTabControl.TabIndex = 1;
+            this.checkRunBackground.AutoSize = true;
+            this.checkRunBackground.Depth = 0;
+            this.checkRunBackground.Location = new System.Drawing.Point(809, 70);
+            this.checkRunBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRunBackground.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkRunBackground.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkRunBackground.Name = "checkRunBackground";
+            this.checkRunBackground.ReadOnly = false;
+            this.checkRunBackground.Ripple = true;
+            this.checkRunBackground.Size = new System.Drawing.Size(169, 37);
+            this.checkRunBackground.TabIndex = 84;
+            this.checkRunBackground.Text = "Run in Background";
+            this.checkRunBackground.UseVisualStyleBackColor = true;
+            this.checkRunBackground.CheckedChanged += new System.EventHandler(this.checkRunBackground_CheckedChanged);
             // 
-            // TabStaticMode
+            // tabMode
             // 
-            this.TabStaticMode.BackColor = System.Drawing.Color.White;
-            this.TabStaticMode.Controls.Add(this.Brightness);
-            this.TabStaticMode.Controls.Add(this.SaveButton);
-            this.TabStaticMode.Controls.Add(this.AutoSaveSwitch);
-            this.TabStaticMode.Controls.Add(this.ColorHexLabel);
-            this.TabStaticMode.Controls.Add(this.CurrentLabel);
-            this.TabStaticMode.Controls.Add(this.HexColorTextbox);
-            this.TabStaticMode.Controls.Add(this.MaterialDivider);
-            this.TabStaticMode.Controls.Add(this.CurrentColor);
-            this.TabStaticMode.Controls.Add(this.ColorPickerMode);
-            this.TabStaticMode.Controls.Add(this.TabSelector);
-            this.TabStaticMode.Location = new System.Drawing.Point(4, 4);
-            this.TabStaticMode.Name = "TabStaticMode";
-            this.TabStaticMode.Padding = new System.Windows.Forms.Padding(3);
-            this.TabStaticMode.Size = new System.Drawing.Size(1226, 589);
-            this.TabStaticMode.TabIndex = 0;
-            this.TabStaticMode.Text = "tabPage1";
+            this.tabMode.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabMode.Controls.Add(this.tabStaticMode);
+            this.tabMode.Controls.Add(this.tabAnimationMode);
+            this.tabMode.Location = new System.Drawing.Point(-143, 110);
+            this.tabMode.Multiline = true;
+            this.tabMode.Name = "tabMode";
+            this.tabMode.SelectedIndex = 0;
+            this.tabMode.Size = new System.Drawing.Size(1234, 615);
+            this.tabMode.TabIndex = 1;
             // 
-            // Brightness
+            // tabStaticMode
             // 
-            this.Brightness.Depth = 0;
-            this.Brightness.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Brightness.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.Brightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Brightness.Location = new System.Drawing.Point(719, 222);
-            this.Brightness.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Brightness.Name = "Brightness";
-            this.Brightness.RangeMax = 255;
-            this.Brightness.ShowValue = false;
-            this.Brightness.Size = new System.Drawing.Size(363, 40);
-            this.Brightness.TabIndex = 82;
-            this.Brightness.Text = "Brightness";
-            this.Brightness.Value = 255;
-            this.Brightness.ValueMax = 255;
-            this.Brightness.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.Brightness_onValueChanged);
+            this.tabStaticMode.BackColor = System.Drawing.Color.White;
+            this.tabStaticMode.Controls.Add(this.sliderBrightness);
+            this.tabStaticMode.Controls.Add(this.lblColorHex);
+            this.tabStaticMode.Controls.Add(this.lblCurrent);
+            this.tabStaticMode.Controls.Add(this.txtHexColor);
+            this.tabStaticMode.Controls.Add(this.materialDivider);
+            this.tabStaticMode.Controls.Add(this.lblCurrentColor);
+            this.tabStaticMode.Controls.Add(this.colorPickerMode);
+            this.tabStaticMode.Controls.Add(this.tabSelector);
+            this.tabStaticMode.Location = new System.Drawing.Point(4, 4);
+            this.tabStaticMode.Name = "tabStaticMode";
+            this.tabStaticMode.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStaticMode.Size = new System.Drawing.Size(1226, 589);
+            this.tabStaticMode.TabIndex = 0;
+            this.tabStaticMode.Text = "tabPage1";
             // 
-            // SaveButton
+            // sliderBrightness
             // 
-            this.SaveButton.AutoSize = false;
-            this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SaveButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.SaveButton.Depth = 0;
-            this.SaveButton.HighEmphasis = true;
-            this.SaveButton.Icon = null;
-            this.SaveButton.Location = new System.Drawing.Point(722, 322);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.SaveButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.SaveButton.Size = new System.Drawing.Size(360, 36);
-            this.SaveButton.TabIndex = 81;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.SaveButton.UseAccentColor = true;
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.sliderBrightness.Depth = 0;
+            this.sliderBrightness.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.sliderBrightness.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.sliderBrightness.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.sliderBrightness.Location = new System.Drawing.Point(719, 222);
+            this.sliderBrightness.MouseState = MaterialSkin.MouseState.HOVER;
+            this.sliderBrightness.Name = "sliderBrightness";
+            this.sliderBrightness.RangeMax = 255;
+            this.sliderBrightness.ShowValue = false;
+            this.sliderBrightness.Size = new System.Drawing.Size(363, 40);
+            this.sliderBrightness.TabIndex = 82;
+            this.sliderBrightness.Text = "Brightness";
+            this.sliderBrightness.Value = 255;
+            this.sliderBrightness.ValueMax = 255;
+            this.sliderBrightness.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.sliderBrightness_onValueChanged);
             // 
-            // AutoSaveSwitch
+            // lblColorHex
             // 
-            this.AutoSaveSwitch.AutoSize = true;
-            this.AutoSaveSwitch.Checked = true;
-            this.AutoSaveSwitch.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AutoSaveSwitch.Depth = 0;
-            this.AutoSaveSwitch.Location = new System.Drawing.Point(719, 279);
-            this.AutoSaveSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.AutoSaveSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.AutoSaveSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AutoSaveSwitch.Name = "AutoSaveSwitch";
-            this.AutoSaveSwitch.Ripple = true;
-            this.AutoSaveSwitch.Size = new System.Drawing.Size(130, 37);
-            this.AutoSaveSwitch.TabIndex = 80;
-            this.AutoSaveSwitch.Text = "Auto Save";
-            this.AutoSaveSwitch.UseVisualStyleBackColor = true;
-            this.AutoSaveSwitch.CheckedChanged += new System.EventHandler(this.AutoSaveSwitch_CheckedChanged);
+            this.lblColorHex.AutoSize = true;
+            this.lblColorHex.Depth = 0;
+            this.lblColorHex.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblColorHex.Location = new System.Drawing.Point(719, 136);
+            this.lblColorHex.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblColorHex.Name = "lblColorHex";
+            this.lblColorHex.Size = new System.Drawing.Size(73, 19);
+            this.lblColorHex.TabIndex = 79;
+            this.lblColorHex.Text = "Color Hex:";
             // 
-            // ColorHexLabel
+            // lblCurrent
             // 
-            this.ColorHexLabel.AutoSize = true;
-            this.ColorHexLabel.Depth = 0;
-            this.ColorHexLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ColorHexLabel.Location = new System.Drawing.Point(719, 136);
-            this.ColorHexLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ColorHexLabel.Name = "ColorHexLabel";
-            this.ColorHexLabel.Size = new System.Drawing.Size(73, 19);
-            this.ColorHexLabel.TabIndex = 79;
-            this.ColorHexLabel.Text = "Color Hex:";
+            this.lblCurrent.AutoSize = true;
+            this.lblCurrent.Depth = 0;
+            this.lblCurrent.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblCurrent.Location = new System.Drawing.Point(719, 73);
+            this.lblCurrent.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrent.Name = "lblCurrent";
+            this.lblCurrent.Size = new System.Drawing.Size(97, 19);
+            this.lblCurrent.TabIndex = 78;
+            this.lblCurrent.Text = "Current Color:";
             // 
-            // CurrentLabel
+            // txtHexColor
             // 
-            this.CurrentLabel.AutoSize = true;
-            this.CurrentLabel.Depth = 0;
-            this.CurrentLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.CurrentLabel.Location = new System.Drawing.Point(719, 73);
-            this.CurrentLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CurrentLabel.Name = "CurrentLabel";
-            this.CurrentLabel.Size = new System.Drawing.Size(97, 19);
-            this.CurrentLabel.TabIndex = 78;
-            this.CurrentLabel.Text = "Current Color:";
+            this.txtHexColor.AnimateReadOnly = true;
+            this.txtHexColor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtHexColor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtHexColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtHexColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtHexColor.Depth = 0;
+            this.txtHexColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtHexColor.HideSelection = true;
+            this.txtHexColor.LeadingIcon = null;
+            this.txtHexColor.Location = new System.Drawing.Point(719, 158);
+            this.txtHexColor.MaxLength = 32767;
+            this.txtHexColor.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtHexColor.Name = "txtHexColor";
+            this.txtHexColor.PasswordChar = '\0';
+            this.txtHexColor.PrefixSuffixText = "$";
+            this.txtHexColor.ReadOnly = true;
+            this.txtHexColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtHexColor.SelectedText = "";
+            this.txtHexColor.SelectionLength = 0;
+            this.txtHexColor.SelectionStart = 0;
+            this.txtHexColor.ShortcutsEnabled = true;
+            this.txtHexColor.ShowAssistiveText = true;
+            this.txtHexColor.Size = new System.Drawing.Size(363, 64);
+            this.txtHexColor.TabIndex = 77;
+            this.txtHexColor.TabStop = false;
+            this.txtHexColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtHexColor.TrailingIcon = null;
+            this.txtHexColor.UseSystemPasswordChar = false;
             // 
-            // HexColorTextbox
+            // materialDivider
             // 
-            this.HexColorTextbox.AnimateReadOnly = true;
-            this.HexColorTextbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.HexColorTextbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.HexColorTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.HexColorTextbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.HexColorTextbox.Depth = 0;
-            this.HexColorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.HexColorTextbox.HideSelection = true;
-            this.HexColorTextbox.LeadingIcon = null;
-            this.HexColorTextbox.Location = new System.Drawing.Point(719, 158);
-            this.HexColorTextbox.MaxLength = 32767;
-            this.HexColorTextbox.MouseState = MaterialSkin.MouseState.OUT;
-            this.HexColorTextbox.Name = "HexColorTextbox";
-            this.HexColorTextbox.PasswordChar = '\0';
-            this.HexColorTextbox.PrefixSuffixText = "$";
-            this.HexColorTextbox.ReadOnly = true;
-            this.HexColorTextbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HexColorTextbox.SelectedText = "";
-            this.HexColorTextbox.SelectionLength = 0;
-            this.HexColorTextbox.SelectionStart = 0;
-            this.HexColorTextbox.ShortcutsEnabled = true;
-            this.HexColorTextbox.ShowAssistiveText = true;
-            this.HexColorTextbox.Size = new System.Drawing.Size(363, 64);
-            this.HexColorTextbox.TabIndex = 77;
-            this.HexColorTextbox.TabStop = false;
-            this.HexColorTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.HexColorTextbox.TrailingIcon = null;
-            this.HexColorTextbox.UseSystemPasswordChar = false;
-            // 
-            // MaterialDivider
-            // 
-            this.MaterialDivider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.materialDivider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaterialDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MaterialDivider.Depth = 0;
-            this.MaterialDivider.Location = new System.Drawing.Point(709, 72);
-            this.MaterialDivider.Margin = new System.Windows.Forms.Padding(0);
-            this.MaterialDivider.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialDivider.Name = "MaterialDivider";
-            this.MaterialDivider.Size = new System.Drawing.Size(1, 400);
-            this.MaterialDivider.TabIndex = 24;
-            this.MaterialDivider.Text = "materialDivider1";
+            this.materialDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider.Depth = 0;
+            this.materialDivider.Location = new System.Drawing.Point(709, 72);
+            this.materialDivider.Margin = new System.Windows.Forms.Padding(0);
+            this.materialDivider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider.Name = "materialDivider";
+            this.materialDivider.Size = new System.Drawing.Size(1, 400);
+            this.materialDivider.TabIndex = 24;
+            this.materialDivider.Text = "materialDivider1";
             // 
-            // CurrentColor
+            // lblCurrentColor
             // 
-            this.CurrentColor.BackColor = System.Drawing.Color.White;
-            this.CurrentColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CurrentColor.Location = new System.Drawing.Point(719, 94);
-            this.CurrentColor.Name = "CurrentColor";
-            this.CurrentColor.Size = new System.Drawing.Size(363, 32);
-            this.CurrentColor.TabIndex = 20;
-            this.CurrentColor.BackColorChanged += new System.EventHandler(this.CurrentColor_BackColorChanged);
+            this.lblCurrentColor.BackColor = System.Drawing.Color.White;
+            this.lblCurrentColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCurrentColor.Location = new System.Drawing.Point(719, 94);
+            this.lblCurrentColor.Name = "lblCurrentColor";
+            this.lblCurrentColor.Size = new System.Drawing.Size(363, 32);
+            this.lblCurrentColor.TabIndex = 20;
             // 
-            // ColorPickerMode
+            // colorPickerMode
             // 
-            this.ColorPickerMode.Controls.Add(this.TabHexagon);
-            this.ColorPickerMode.Controls.Add(this.TabWheel);
-            this.ColorPickerMode.Controls.Add(this.TabColorCode);
-            this.ColorPickerMode.Depth = 0;
-            this.ColorPickerMode.Location = new System.Drawing.Point(204, 56);
-            this.ColorPickerMode.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ColorPickerMode.Multiline = true;
-            this.ColorPickerMode.Name = "ColorPickerMode";
-            this.ColorPickerMode.SelectedIndex = 0;
-            this.ColorPickerMode.Size = new System.Drawing.Size(496, 428);
-            this.ColorPickerMode.TabIndex = 19;
+            this.colorPickerMode.Controls.Add(this.tabHexagon);
+            this.colorPickerMode.Controls.Add(this.tabWheel);
+            this.colorPickerMode.Controls.Add(this.tabColorCode);
+            this.colorPickerMode.Depth = 0;
+            this.colorPickerMode.Location = new System.Drawing.Point(204, 56);
+            this.colorPickerMode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.colorPickerMode.Multiline = true;
+            this.colorPickerMode.Name = "colorPickerMode";
+            this.colorPickerMode.SelectedIndex = 0;
+            this.colorPickerMode.Size = new System.Drawing.Size(496, 428);
+            this.colorPickerMode.TabIndex = 19;
             // 
-            // TabHexagon
+            // tabHexagon
             // 
-            this.TabHexagon.BackColor = System.Drawing.Color.White;
-            this.TabHexagon.Controls.Add(this.ColorHexagon);
-            this.TabHexagon.Location = new System.Drawing.Point(4, 22);
-            this.TabHexagon.Name = "TabHexagon";
-            this.TabHexagon.Padding = new System.Windows.Forms.Padding(3);
-            this.TabHexagon.Size = new System.Drawing.Size(488, 402);
-            this.TabHexagon.TabIndex = 0;
-            this.TabHexagon.Text = "Color Hexagon";
+            this.tabHexagon.BackColor = System.Drawing.Color.White;
+            this.tabHexagon.Controls.Add(this.colorHexagon);
+            this.tabHexagon.Location = new System.Drawing.Point(4, 22);
+            this.tabHexagon.Name = "tabHexagon";
+            this.tabHexagon.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHexagon.Size = new System.Drawing.Size(488, 402);
+            this.tabHexagon.TabIndex = 0;
+            this.tabHexagon.Text = "Color Hexagon";
             // 
-            // ColorHexagon
+            // colorHexagon
             // 
-            this.ColorHexagon.Location = new System.Drawing.Point(53, 8);
-            this.ColorHexagon.Name = "ColorHexagon";
-            this.ColorHexagon.Size = new System.Drawing.Size(388, 388);
-            this.ColorHexagon.TabIndex = 0;
-            this.ColorHexagon.ColorChanged += new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon.ColorChangedEventHandler(this.ColorHexagon_ColorChanged);
+            this.colorHexagon.Location = new System.Drawing.Point(53, 8);
+            this.colorHexagon.Name = "colorHexagon";
+            this.colorHexagon.Size = new System.Drawing.Size(388, 388);
+            this.colorHexagon.TabIndex = 0;
+            this.colorHexagon.ColorChanged += new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon.ColorChangedEventHandler(this.colorHexagon_ColorChanged);
             // 
-            // TabWheel
+            // tabWheel
             // 
-            this.TabWheel.BackColor = System.Drawing.Color.White;
-            this.TabWheel.Controls.Add(this.ColorWheel);
-            this.TabWheel.Location = new System.Drawing.Point(4, 22);
-            this.TabWheel.Name = "TabWheel";
-            this.TabWheel.Padding = new System.Windows.Forms.Padding(3);
-            this.TabWheel.Size = new System.Drawing.Size(488, 402);
-            this.TabWheel.TabIndex = 1;
-            this.TabWheel.Text = "Color Wheel";
+            this.tabWheel.BackColor = System.Drawing.Color.White;
+            this.tabWheel.Controls.Add(this.colorWheel);
+            this.tabWheel.Location = new System.Drawing.Point(4, 22);
+            this.tabWheel.Name = "tabWheel";
+            this.tabWheel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabWheel.Size = new System.Drawing.Size(488, 402);
+            this.tabWheel.TabIndex = 1;
+            this.tabWheel.Text = "Color Wheel";
             // 
-            // ColorWheel
+            // colorWheel
             // 
-            this.ColorWheel.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ColorWheel.Location = new System.Drawing.Point(7, 4);
-            this.ColorWheel.Name = "ColorWheel";
-            this.ColorWheel.Size = new System.Drawing.Size(475, 395);
-            this.ColorWheel.TabIndex = 0;
-            this.ColorWheel.Text = "colorWheel1";
-            this.ColorWheel.ColorChanged += new System.EventHandler(this.ColorWheel_ColorChanged);
+            this.colorWheel.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.colorWheel.Location = new System.Drawing.Point(7, 4);
+            this.colorWheel.Name = "colorWheel";
+            this.colorWheel.Size = new System.Drawing.Size(475, 395);
+            this.colorWheel.TabIndex = 0;
+            this.colorWheel.Text = "colorWheel1";
+            this.colorWheel.ColorChanged += new System.EventHandler(this.colorWheel_ColorChanged);
             // 
-            // TabColorCode
+            // tabColorCode
             // 
-            this.TabColorCode.BackColor = System.Drawing.Color.White;
-            this.TabColorCode.Controls.Add(ColorGreenLabel);
-            this.TabColorCode.Controls.Add(this.ColorGreenCode);
-            this.TabColorCode.Controls.Add(ColorBlueLabel);
-            this.TabColorCode.Controls.Add(this.ColorBlueCode);
-            this.TabColorCode.Controls.Add(this.ColorRedLabel);
-            this.TabColorCode.Controls.Add(this.ColorRedCode);
-            this.TabColorCode.Location = new System.Drawing.Point(4, 22);
-            this.TabColorCode.Name = "TabColorCode";
-            this.TabColorCode.Size = new System.Drawing.Size(488, 402);
-            this.TabColorCode.TabIndex = 2;
-            this.TabColorCode.Text = "Color Code";
+            this.tabColorCode.BackColor = System.Drawing.Color.White;
+            this.tabColorCode.Controls.Add(lblColorGreen);
+            this.tabColorCode.Controls.Add(this.txtColorGreenCode);
+            this.tabColorCode.Controls.Add(lblColorBlue);
+            this.tabColorCode.Controls.Add(this.txtColorBlueCode);
+            this.tabColorCode.Controls.Add(this.lblColorRed);
+            this.tabColorCode.Controls.Add(this.txtColorRedCode);
+            this.tabColorCode.Location = new System.Drawing.Point(4, 22);
+            this.tabColorCode.Name = "tabColorCode";
+            this.tabColorCode.Size = new System.Drawing.Size(488, 402);
+            this.tabColorCode.TabIndex = 2;
+            this.tabColorCode.Text = "Color Code";
             // 
-            // ColorGreenCode
+            // txtColorGreenCode
             // 
-            this.ColorGreenCode.AnimateReadOnly = false;
-            this.ColorGreenCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ColorGreenCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ColorGreenCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ColorGreenCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.ColorGreenCode.Depth = 0;
-            this.ColorGreenCode.ErrorMessage = "Invalid entry";
-            this.ColorGreenCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ColorGreenCode.HelperText = "Range: 0-255";
-            this.ColorGreenCode.HideSelection = true;
-            this.ColorGreenCode.LeadingIcon = null;
-            this.ColorGreenCode.Location = new System.Drawing.Point(17, 124);
-            this.ColorGreenCode.MaxLength = 32767;
-            this.ColorGreenCode.MouseState = MaterialSkin.MouseState.OUT;
-            this.ColorGreenCode.Name = "ColorGreenCode";
-            this.ColorGreenCode.PasswordChar = '\0';
-            this.ColorGreenCode.PrefixSuffixText = "$";
-            this.ColorGreenCode.ReadOnly = false;
-            this.ColorGreenCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ColorGreenCode.SelectedText = "";
-            this.ColorGreenCode.SelectionLength = 0;
-            this.ColorGreenCode.SelectionStart = 0;
-            this.ColorGreenCode.ShortcutsEnabled = true;
-            this.ColorGreenCode.ShowAssistiveText = true;
-            this.ColorGreenCode.Size = new System.Drawing.Size(452, 64);
-            this.ColorGreenCode.TabIndex = 76;
-            this.ColorGreenCode.TabStop = false;
-            this.ColorGreenCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ColorGreenCode.TrailingIcon = null;
-            this.ColorGreenCode.UseSystemPasswordChar = false;
-            this.ColorGreenCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ColorCode_KeyPress);
-            this.ColorGreenCode.TextChanged += new System.EventHandler(this.ColorCode_TextChanged);
+            this.txtColorGreenCode.AnimateReadOnly = false;
+            this.txtColorGreenCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtColorGreenCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtColorGreenCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtColorGreenCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtColorGreenCode.Depth = 0;
+            this.txtColorGreenCode.ErrorMessage = "Invalid entry";
+            this.txtColorGreenCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtColorGreenCode.HelperText = "Range: 0-255";
+            this.txtColorGreenCode.HideSelection = true;
+            this.txtColorGreenCode.LeadingIcon = null;
+            this.txtColorGreenCode.Location = new System.Drawing.Point(17, 124);
+            this.txtColorGreenCode.MaxLength = 32767;
+            this.txtColorGreenCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtColorGreenCode.Name = "txtColorGreenCode";
+            this.txtColorGreenCode.PasswordChar = '\0';
+            this.txtColorGreenCode.PrefixSuffixText = "$";
+            this.txtColorGreenCode.ReadOnly = false;
+            this.txtColorGreenCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtColorGreenCode.SelectedText = "";
+            this.txtColorGreenCode.SelectionLength = 0;
+            this.txtColorGreenCode.SelectionStart = 0;
+            this.txtColorGreenCode.ShortcutsEnabled = true;
+            this.txtColorGreenCode.ShowAssistiveText = true;
+            this.txtColorGreenCode.Size = new System.Drawing.Size(452, 64);
+            this.txtColorGreenCode.TabIndex = 73;
+            this.txtColorGreenCode.TabStop = false;
+            this.txtColorGreenCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtColorGreenCode.TrailingIcon = null;
+            this.txtColorGreenCode.UseSystemPasswordChar = false;
+            this.txtColorGreenCode.TextChanged += new System.EventHandler(this.colorRedCode_TextChanged);
             // 
-            // ColorBlueCode
+            // txtColorBlueCode
             // 
-            this.ColorBlueCode.AnimateReadOnly = false;
-            this.ColorBlueCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ColorBlueCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ColorBlueCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ColorBlueCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.ColorBlueCode.Depth = 0;
-            this.ColorBlueCode.ErrorMessage = "Invalid entry";
-            this.ColorBlueCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ColorBlueCode.HelperText = "Range: 0-255";
-            this.ColorBlueCode.HideSelection = true;
-            this.ColorBlueCode.LeadingIcon = null;
-            this.ColorBlueCode.Location = new System.Drawing.Point(17, 207);
-            this.ColorBlueCode.MaxLength = 32767;
-            this.ColorBlueCode.MouseState = MaterialSkin.MouseState.OUT;
-            this.ColorBlueCode.Name = "ColorBlueCode";
-            this.ColorBlueCode.PasswordChar = '\0';
-            this.ColorBlueCode.PrefixSuffixText = "$";
-            this.ColorBlueCode.ReadOnly = false;
-            this.ColorBlueCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ColorBlueCode.SelectedText = "";
-            this.ColorBlueCode.SelectionLength = 0;
-            this.ColorBlueCode.SelectionStart = 0;
-            this.ColorBlueCode.ShortcutsEnabled = true;
-            this.ColorBlueCode.ShowAssistiveText = true;
-            this.ColorBlueCode.Size = new System.Drawing.Size(452, 64);
-            this.ColorBlueCode.TabIndex = 74;
-            this.ColorBlueCode.TabStop = false;
-            this.ColorBlueCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ColorBlueCode.TrailingIcon = null;
-            this.ColorBlueCode.UseSystemPasswordChar = false;
-            this.ColorBlueCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ColorCode_KeyPress);
-            this.ColorBlueCode.TextChanged += new System.EventHandler(this.ColorCode_TextChanged);
+            this.txtColorBlueCode.AnimateReadOnly = false;
+            this.txtColorBlueCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtColorBlueCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtColorBlueCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtColorBlueCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtColorBlueCode.Depth = 0;
+            this.txtColorBlueCode.ErrorMessage = "Invalid entry";
+            this.txtColorBlueCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtColorBlueCode.HelperText = "Range: 0-255";
+            this.txtColorBlueCode.HideSelection = true;
+            this.txtColorBlueCode.LeadingIcon = null;
+            this.txtColorBlueCode.Location = new System.Drawing.Point(17, 207);
+            this.txtColorBlueCode.MaxLength = 32767;
+            this.txtColorBlueCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtColorBlueCode.Name = "txtColorBlueCode";
+            this.txtColorBlueCode.PasswordChar = '\0';
+            this.txtColorBlueCode.PrefixSuffixText = "$";
+            this.txtColorBlueCode.ReadOnly = false;
+            this.txtColorBlueCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtColorBlueCode.SelectedText = "";
+            this.txtColorBlueCode.SelectionLength = 0;
+            this.txtColorBlueCode.SelectionStart = 0;
+            this.txtColorBlueCode.ShortcutsEnabled = true;
+            this.txtColorBlueCode.ShowAssistiveText = true;
+            this.txtColorBlueCode.Size = new System.Drawing.Size(452, 64);
+            this.txtColorBlueCode.TabIndex = 74;
+            this.txtColorBlueCode.TabStop = false;
+            this.txtColorBlueCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtColorBlueCode.TrailingIcon = null;
+            this.txtColorBlueCode.UseSystemPasswordChar = false;
+            this.txtColorBlueCode.TextChanged += new System.EventHandler(this.colorRedCode_TextChanged);
             // 
-            // ColorRedLabel
+            // lblColorRed
             // 
-            this.ColorRedLabel.AutoSize = true;
-            this.ColorRedLabel.Depth = 0;
-            this.ColorRedLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ColorRedLabel.Location = new System.Drawing.Point(20, 18);
-            this.ColorRedLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ColorRedLabel.Name = "ColorRedLabel";
-            this.ColorRedLabel.Size = new System.Drawing.Size(32, 19);
-            this.ColorRedLabel.TabIndex = 73;
-            this.ColorRedLabel.Text = "Red:";
+            this.lblColorRed.AutoSize = true;
+            this.lblColorRed.Depth = 0;
+            this.lblColorRed.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblColorRed.Location = new System.Drawing.Point(20, 18);
+            this.lblColorRed.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblColorRed.Name = "lblColorRed";
+            this.lblColorRed.Size = new System.Drawing.Size(32, 19);
+            this.lblColorRed.TabIndex = 73;
+            this.lblColorRed.Text = "Red:";
             // 
-            // ColorRedCode
+            // txtColorRedCode
             // 
-            this.ColorRedCode.AnimateReadOnly = false;
-            this.ColorRedCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ColorRedCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ColorRedCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ColorRedCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.ColorRedCode.Depth = 0;
-            this.ColorRedCode.ErrorMessage = "Invalid entry";
-            this.ColorRedCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ColorRedCode.HelperText = "Range: 0-255";
-            this.ColorRedCode.HideSelection = true;
-            this.ColorRedCode.LeadingIcon = null;
-            this.ColorRedCode.Location = new System.Drawing.Point(17, 40);
-            this.ColorRedCode.MaxLength = 3;
-            this.ColorRedCode.MouseState = MaterialSkin.MouseState.OUT;
-            this.ColorRedCode.Name = "ColorRedCode";
-            this.ColorRedCode.PasswordChar = '\0';
-            this.ColorRedCode.PrefixSuffixText = "$";
-            this.ColorRedCode.ReadOnly = false;
-            this.ColorRedCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ColorRedCode.SelectedText = "";
-            this.ColorRedCode.SelectionLength = 0;
-            this.ColorRedCode.SelectionStart = 0;
-            this.ColorRedCode.ShortcutsEnabled = true;
-            this.ColorRedCode.ShowAssistiveText = true;
-            this.ColorRedCode.Size = new System.Drawing.Size(452, 64);
-            this.ColorRedCode.TabIndex = 72;
-            this.ColorRedCode.TabStop = false;
-            this.ColorRedCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ColorRedCode.TrailingIcon = null;
-            this.ColorRedCode.UseSystemPasswordChar = false;
-            this.ColorRedCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ColorCode_KeyPress);
-            this.ColorRedCode.TextChanged += new System.EventHandler(this.ColorCode_TextChanged);
+            this.txtColorRedCode.AnimateReadOnly = false;
+            this.txtColorRedCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtColorRedCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtColorRedCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtColorRedCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtColorRedCode.Depth = 0;
+            this.txtColorRedCode.ErrorMessage = "Invalid entry";
+            this.txtColorRedCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtColorRedCode.HelperText = "Range: 0-255";
+            this.txtColorRedCode.HideSelection = true;
+            this.txtColorRedCode.LeadingIcon = null;
+            this.txtColorRedCode.Location = new System.Drawing.Point(17, 40);
+            this.txtColorRedCode.MaxLength = 3;
+            this.txtColorRedCode.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtColorRedCode.Name = "txtColorRedCode";
+            this.txtColorRedCode.PasswordChar = '\0';
+            this.txtColorRedCode.PrefixSuffixText = "$";
+            this.txtColorRedCode.ReadOnly = false;
+            this.txtColorRedCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtColorRedCode.SelectedText = "";
+            this.txtColorRedCode.SelectionLength = 0;
+            this.txtColorRedCode.SelectionStart = 0;
+            this.txtColorRedCode.ShortcutsEnabled = true;
+            this.txtColorRedCode.ShowAssistiveText = true;
+            this.txtColorRedCode.Size = new System.Drawing.Size(452, 64);
+            this.txtColorRedCode.TabIndex = 72;
+            this.txtColorRedCode.TabStop = false;
+            this.txtColorRedCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtColorRedCode.TrailingIcon = null;
+            this.txtColorRedCode.UseSystemPasswordChar = false;
+            this.txtColorRedCode.TextChanged += new System.EventHandler(this.colorRedCode_TextChanged);
             // 
-            // TabSelector
+            // tabSelector
             // 
-            this.TabSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabSelector.BaseTabControl = this.ColorPickerMode;
-            this.TabSelector.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            this.TabSelector.Depth = 0;
-            this.TabSelector.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.TabSelector.Location = new System.Drawing.Point(204, 2);
-            this.TabSelector.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TabSelector.Name = "TabSelector";
-            this.TabSelector.Size = new System.Drawing.Size(881, 48);
-            this.TabSelector.TabIndex = 18;
-            this.TabSelector.Text = "materialTabSelector1";
+            this.tabSelector.BaseTabControl = this.colorPickerMode;
+            this.tabSelector.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            this.tabSelector.Depth = 0;
+            this.tabSelector.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tabSelector.Location = new System.Drawing.Point(204, 2);
+            this.tabSelector.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabSelector.Name = "tabSelector";
+            this.tabSelector.Size = new System.Drawing.Size(881, 48);
+            this.tabSelector.TabIndex = 18;
+            this.tabSelector.Text = "materialTabSelector1";
             // 
-            // TabAnimationMode
+            // tabAnimationMode
             // 
-            this.TabAnimationMode.BackColor = System.Drawing.Color.White;
-            this.TabAnimationMode.Controls.Add(this.ColorFlashHexagon);
-            this.TabAnimationMode.Controls.Add(this.AnimationSpeed);
-            this.TabAnimationMode.Controls.Add(this.AnimationSelector);
-            this.TabAnimationMode.Location = new System.Drawing.Point(4, 4);
-            this.TabAnimationMode.Name = "TabAnimationMode";
-            this.TabAnimationMode.Padding = new System.Windows.Forms.Padding(3);
-            this.TabAnimationMode.Size = new System.Drawing.Size(1226, 589);
-            this.TabAnimationMode.TabIndex = 1;
-            this.TabAnimationMode.Text = "tabPage2";
+            this.tabAnimationMode.BackColor = System.Drawing.Color.White;
+            this.tabAnimationMode.Controls.Add(this.materialLabel1);
+            this.tabAnimationMode.Controls.Add(this.trackAnimationSpeed);
+            this.tabAnimationMode.Controls.Add(this.colorCustomHexagon);
+            this.tabAnimationMode.Controls.Add(this.txtAnimationSelector);
+            this.tabAnimationMode.Location = new System.Drawing.Point(4, 4);
+            this.tabAnimationMode.Name = "tabAnimationMode";
+            this.tabAnimationMode.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAnimationMode.Size = new System.Drawing.Size(1226, 589);
+            this.tabAnimationMode.TabIndex = 1;
+            this.tabAnimationMode.Text = "tabPage2";
             // 
-            // ColorFlashHexagon
+            // materialLabel1
             // 
-            this.ColorFlashHexagon.Location = new System.Drawing.Point(171, 61);
-            this.ColorFlashHexagon.Name = "ColorFlashHexagon";
-            this.ColorFlashHexagon.Size = new System.Drawing.Size(946, 362);
-            this.ColorFlashHexagon.TabIndex = 68;
-            this.ColorFlashHexagon.ColorChanged += new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon.ColorChangedEventHandler(this.ColorFlashHexagon_ColorChanged);
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(911, 61);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel1.TabIndex = 71;
+            this.materialLabel1.Text = "Speed:";
             // 
-            // AnimationSpeed
+            // trackAnimationSpeed
             // 
-            this.AnimationSpeed.Depth = 0;
-            this.AnimationSpeed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AnimationSpeed.Location = new System.Drawing.Point(171, 441);
-            this.AnimationSpeed.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AnimationSpeed.Name = "AnimationSpeed";
-            this.AnimationSpeed.RangeMax = 20;
-            this.AnimationSpeed.RangeMin = 1;
-            this.AnimationSpeed.ShowValue = false;
-            this.AnimationSpeed.Size = new System.Drawing.Size(946, 40);
-            this.AnimationSpeed.TabIndex = 67;
-            this.AnimationSpeed.Text = "Speed";
-            this.AnimationSpeed.Value = 5;
-            this.AnimationSpeed.ValueMax = 20;
-            this.AnimationSpeed.ValueSuffix = "1";
-            this.AnimationSpeed.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.AnimationSpeed_onValueChanged);
+            this.trackAnimationSpeed.Location = new System.Drawing.Point(965, 61);
+            this.trackAnimationSpeed.Maximum = 3;
+            this.trackAnimationSpeed.Minimum = 1;
+            this.trackAnimationSpeed.Name = "trackAnimationSpeed";
+            this.trackAnimationSpeed.Size = new System.Drawing.Size(152, 45);
+            this.trackAnimationSpeed.TabIndex = 70;
+            this.trackAnimationSpeed.Value = 2;
+            this.trackAnimationSpeed.Scroll += new System.EventHandler(this.trackAnimationSpeed_Scroll);
             // 
-            // AnimationSelector
+            // colorCustomHexagon
             // 
-            this.AnimationSelector.AutoResize = false;
-            this.AnimationSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AnimationSelector.Depth = 0;
-            this.AnimationSelector.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.AnimationSelector.DropDownHeight = 174;
-            this.AnimationSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AnimationSelector.DropDownWidth = 121;
-            this.AnimationSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.AnimationSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AnimationSelector.FormattingEnabled = true;
-            this.AnimationSelector.Hint = "Animation";
-            this.AnimationSelector.IntegralHeight = false;
-            this.AnimationSelector.ItemHeight = 43;
-            this.AnimationSelector.Items.AddRange(new object[] {
+            this.colorCustomHexagon.Location = new System.Drawing.Point(171, 61);
+            this.colorCustomHexagon.Name = "colorCustomHexagon";
+            this.colorCustomHexagon.Size = new System.Drawing.Size(946, 362);
+            this.colorCustomHexagon.TabIndex = 68;
+            this.colorCustomHexagon.ColorChanged += new MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon.ColorChangedEventHandler(this.colorCustomHexagon_ColorChanged);
+            // 
+            // txtAnimationSelector
+            // 
+            this.txtAnimationSelector.AutoResize = false;
+            this.txtAnimationSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtAnimationSelector.Depth = 0;
+            this.txtAnimationSelector.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.txtAnimationSelector.DropDownHeight = 174;
+            this.txtAnimationSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtAnimationSelector.DropDownWidth = 191;
+            this.txtAnimationSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAnimationSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtAnimationSelector.FormattingEnabled = true;
+            this.txtAnimationSelector.Hint = "Animation";
+            this.txtAnimationSelector.IntegralHeight = false;
+            this.txtAnimationSelector.ItemHeight = 43;
+            this.txtAnimationSelector.Items.AddRange(new object[] {
+            "",
             "Rainbow",
             "Random Color",
             "Random Flash",
             "Color Flash",
             "Random Breathing",
             "Color Breathing"});
-            this.AnimationSelector.Location = new System.Drawing.Point(171, 6);
-            this.AnimationSelector.MaxDropDownItems = 4;
-            this.AnimationSelector.MouseState = MaterialSkin.MouseState.OUT;
-            this.AnimationSelector.Name = "AnimationSelector";
-            this.AnimationSelector.Size = new System.Drawing.Size(946, 49);
-            this.AnimationSelector.StartIndex = 0;
-            this.AnimationSelector.TabIndex = 1;
-            this.AnimationSelector.SelectedIndexChanged += new System.EventHandler(this.AnimationSelector_SelectedIndexChanged);
+            this.txtAnimationSelector.Location = new System.Drawing.Point(171, 6);
+            this.txtAnimationSelector.MaxDropDownItems = 4;
+            this.txtAnimationSelector.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtAnimationSelector.Name = "txtAnimationSelector";
+            this.txtAnimationSelector.Size = new System.Drawing.Size(946, 49);
+            this.txtAnimationSelector.StartIndex = 0;
+            this.txtAnimationSelector.TabIndex = 1;
+            this.txtAnimationSelector.SelectedIndexChanged += new System.EventHandler(this.txtAnimationSelector_SelectedIndexChanged);
             // 
-            // ModeSelector
+            // txtModeSelector
             // 
-            this.ModeSelector.AutoResize = false;
-            this.ModeSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ModeSelector.Depth = 0;
-            this.ModeSelector.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.ModeSelector.DropDownHeight = 174;
-            this.ModeSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ModeSelector.DropDownWidth = 121;
-            this.ModeSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ModeSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ModeSelector.FormattingEnabled = true;
-            this.ModeSelector.Hint = "Light Mode";
-            this.ModeSelector.IntegralHeight = false;
-            this.ModeSelector.ItemHeight = 43;
-            this.ModeSelector.Items.AddRange(new object[] {
+            this.txtModeSelector.AutoResize = false;
+            this.txtModeSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtModeSelector.Depth = 0;
+            this.txtModeSelector.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.txtModeSelector.DropDownHeight = 174;
+            this.txtModeSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtModeSelector.DropDownWidth = 121;
+            this.txtModeSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txtModeSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtModeSelector.FormattingEnabled = true;
+            this.txtModeSelector.Hint = "Light Mode";
+            this.txtModeSelector.IntegralHeight = false;
+            this.txtModeSelector.ItemHeight = 43;
+            this.txtModeSelector.Items.AddRange(new object[] {
             "Static",
-            "Animation",
-            "Disabled"});
-            this.ModeSelector.Location = new System.Drawing.Point(32, 18);
-            this.ModeSelector.MaxDropDownItems = 4;
-            this.ModeSelector.MouseState = MaterialSkin.MouseState.OUT;
-            this.ModeSelector.Name = "ModeSelector";
-            this.ModeSelector.Size = new System.Drawing.Size(946, 49);
-            this.ModeSelector.StartIndex = 0;
-            this.ModeSelector.TabIndex = 0;
-            this.ModeSelector.SelectedIndexChanged += new System.EventHandler(this.ModeSelector_SelectedIndexChanged);
+            "Animation"});
+            this.txtModeSelector.Location = new System.Drawing.Point(32, 18);
+            this.txtModeSelector.MaxDropDownItems = 4;
+            this.txtModeSelector.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtModeSelector.Name = "txtModeSelector";
+            this.txtModeSelector.Size = new System.Drawing.Size(946, 49);
+            this.txtModeSelector.StartIndex = 0;
+            this.txtModeSelector.TabIndex = 0;
+            this.txtModeSelector.SelectedIndexChanged += new System.EventHandler(this.txtModeSelector_SelectedIndexChanged);
             // 
-            // TabAbout
+            // tabAbout
             // 
-            this.TabAbout.BackColor = System.Drawing.Color.White;
-            this.TabAbout.Controls.Add(this.ExpansionAbout4Panel);
-            this.TabAbout.Location = new System.Drawing.Point(4, 22);
-            this.TabAbout.Name = "TabAbout";
-            this.TabAbout.Padding = new System.Windows.Forms.Padding(3);
-            this.TabAbout.Size = new System.Drawing.Size(1011, 680);
-            this.TabAbout.TabIndex = 1;
-            this.TabAbout.Text = "About";
+            this.tabAbout.BackColor = System.Drawing.Color.White;
+            this.tabAbout.Controls.Add(this.panelAbout);
+            this.tabAbout.Location = new System.Drawing.Point(4, 22);
+            this.tabAbout.Name = "tabAbout";
+            this.tabAbout.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAbout.Size = new System.Drawing.Size(1011, 680);
+            this.tabAbout.TabIndex = 1;
+            this.tabAbout.Text = "About";
             // 
-            // ProtectionLoop
+            // panelAbout
             // 
-            this.ProtectionLoop.Enabled = true;
-            this.ProtectionLoop.Tick += new System.EventHandler(this.ProtectionLoop_Tick);
+            this.panelAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelAbout.Controls.Add(this.lblDeveloper);
+            this.panelAbout.Controls.Add(this.imgLogo);
+            this.panelAbout.Controls.Add(this.lblAbout);
+            this.panelAbout.Depth = 0;
+            this.panelAbout.ExpandHeight = 461;
+            this.panelAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.panelAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelAbout.Location = new System.Drawing.Point(152, 42);
+            this.panelAbout.Margin = new System.Windows.Forms.Padding(16);
+            this.panelAbout.MouseState = MaterialSkin.MouseState.HOVER;
+            this.panelAbout.Name = "panelAbout";
+            this.panelAbout.Padding = new System.Windows.Forms.Padding(24, 64, 24, 16);
+            this.panelAbout.ShowValidationButtons = false;
+            this.panelAbout.Size = new System.Drawing.Size(689, 461);
+            this.panelAbout.TabIndex = 1;
+            this.panelAbout.Title = "Custom Light";
             // 
-            // NotifyIcon
+            // lblDeveloper
             // 
-            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
-            this.NotifyIcon.Text = "Custom Light";
-            this.NotifyIcon.Visible = true;
-            this.NotifyIcon.Click += new System.EventHandler(this.NotifyIcon_Click);
-            this.NotifyIcon.DoubleClick += new System.EventHandler(this.NotifyIcon_Click);
-            this.NotifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_Click);
-            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_Click);
+            this.lblDeveloper.AutoSize = true;
+            this.lblDeveloper.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDeveloper.Location = new System.Drawing.Point(175, 312);
+            this.lblDeveloper.Name = "lblDeveloper";
+            this.lblDeveloper.Size = new System.Drawing.Size(106, 18);
+            this.lblDeveloper.TabIndex = 3;
+            this.lblDeveloper.Text = "Developed by";
             // 
-            // WorkBackground
+            // imgLogo
             // 
-            this.WorkBackground.Tick += new System.EventHandler(this.WorkBackground_Tick);
+            this.imgLogo.Image = global::CustomLight.Properties.Resources.Logo;
+            this.imgLogo.Location = new System.Drawing.Point(178, 333);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(348, 109);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogo.TabIndex = 0;
+            this.imgLogo.TabStop = false;
             // 
-            // CheckAnimation
+            // lblAbout
             // 
-            this.CheckAnimation.WorkerReportsProgress = true;
-            this.CheckAnimation.WorkerSupportsCancellation = true;
-            this.CheckAnimation.DoWork += new System.ComponentModel.DoWorkEventHandler(this.CheckAnimation_DoWork);
-            // 
-            // Breathing
-            // 
-            this.Breathing.Interval = 10;
-            this.Breathing.Tick += new System.EventHandler(this.Breathing_Tick);
-            // 
-            // Logo
-            // 
-            this.Logo.Image = global::CustomLight.Properties.Resources.Logo;
-            this.Logo.Location = new System.Drawing.Point(178, 333);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(348, 109);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
-            this.Logo.Click += new System.EventHandler(this.Logo_Click);
-            // 
-            // ExpansionAbout4Panel
-            // 
-            this.ExpansionAbout4Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ExpansionAbout4Panel.Controls.Add(this.DeveloperLabel);
-            this.ExpansionAbout4Panel.Controls.Add(this.Logo);
-            this.ExpansionAbout4Panel.Controls.Add(this.AboutLabel);
-            this.ExpansionAbout4Panel.Depth = 0;
-            this.ExpansionAbout4Panel.ExpandHeight = 461;
-            this.ExpansionAbout4Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ExpansionAbout4Panel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ExpansionAbout4Panel.Location = new System.Drawing.Point(152, 42);
-            this.ExpansionAbout4Panel.Margin = new System.Windows.Forms.Padding(16);
-            this.ExpansionAbout4Panel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ExpansionAbout4Panel.Name = "ExpansionAbout4Panel";
-            this.ExpansionAbout4Panel.Padding = new System.Windows.Forms.Padding(24, 64, 24, 16);
-            this.ExpansionAbout4Panel.ShowValidationButtons = false;
-            this.ExpansionAbout4Panel.Size = new System.Drawing.Size(689, 461);
-            this.ExpansionAbout4Panel.TabIndex = 1;
-            this.ExpansionAbout4Panel.Title = "Custom Light";
-            // 
-            // AboutLabel
-            // 
-            this.AboutLabel.Depth = 0;
-            this.AboutLabel.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.AboutLabel.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.AboutLabel.Location = new System.Drawing.Point(12, 64);
-            this.AboutLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AboutLabel.Name = "AboutLabel";
-            this.AboutLabel.Size = new System.Drawing.Size(667, 230);
-            this.AboutLabel.TabIndex = 2;
-            this.AboutLabel.Text = "Forget the old-fashioned software the manufacturer gave you to manage the lights " +
+            this.lblAbout.Depth = 0;
+            this.lblAbout.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAbout.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAbout.Location = new System.Drawing.Point(12, 64);
+            this.lblAbout.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.Size = new System.Drawing.Size(667, 230);
+            this.lblAbout.TabIndex = 2;
+            this.lblAbout.Text = "Forget the old-fashioned software the manufacturer gave you to manage the lights " +
     "and discover the magic of lights with us!";
             // 
-            // DeveloperLabel
+            // notifyIcon
             // 
-            this.DeveloperLabel.AutoSize = true;
-            this.DeveloperLabel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DeveloperLabel.Location = new System.Drawing.Point(175, 312);
-            this.DeveloperLabel.Name = "DeveloperLabel";
-            this.DeveloperLabel.Size = new System.Drawing.Size(106, 18);
-            this.DeveloperLabel.TabIndex = 3;
-            this.DeveloperLabel.Text = "Developed by";
+            this.notifyIcon.ContextMenuStrip = this.contextMenu;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "Custom Light";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuExit});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(94, 26);
+            // 
+            // menuExit
+            // 
+            this.menuExit.Name = "menuExit";
+            this.menuExit.Size = new System.Drawing.Size(93, 22);
+            this.menuExit.Text = "Exit";
+            this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
+            // 
+            // checkDefaultSettings
+            // 
+            this.checkDefaultSettings.AutoSize = true;
+            this.checkDefaultSettings.Depth = 0;
+            this.checkDefaultSettings.Location = new System.Drawing.Point(504, 70);
+            this.checkDefaultSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.checkDefaultSettings.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkDefaultSettings.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkDefaultSettings.Name = "checkDefaultSettings";
+            this.checkDefaultSettings.ReadOnly = false;
+            this.checkDefaultSettings.Ripple = true;
+            this.checkDefaultSettings.Size = new System.Drawing.Size(149, 37);
+            this.checkDefaultSettings.TabIndex = 87;
+            this.checkDefaultSettings.Text = "Default Settings";
+            this.checkDefaultSettings.UseVisualStyleBackColor = true;
+            this.checkDefaultSettings.CheckedChanged += new System.EventHandler(this.checkDefaultSettings_CheckedChanged);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.TabControl);
-            this.DrawerTabControl = this.TabControl;
+            this.Controls.Add(this.tabControl);
+            this.DrawerTabControl = this.tabControl;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_48;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -754,70 +739,72 @@
             this.Name = "MainWindow";
             this.Padding = new System.Windows.Forms.Padding(3, 72, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Custom Light (v1.0)";
+            this.Text = "Custom Light (v1.1)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
-            this.TabControl.ResumeLayout(false);
-            this.TabManageLights.ResumeLayout(false);
-            this.TabManageLights.PerformLayout();
-            this.ModeTabControl.ResumeLayout(false);
-            this.TabStaticMode.ResumeLayout(false);
-            this.TabStaticMode.PerformLayout();
-            this.ColorPickerMode.ResumeLayout(false);
-            this.TabHexagon.ResumeLayout(false);
-            this.TabWheel.ResumeLayout(false);
-            this.TabColorCode.ResumeLayout(false);
-            this.TabColorCode.PerformLayout();
-            this.TabAnimationMode.ResumeLayout(false);
-            this.TabAbout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.ExpansionAbout4Panel.ResumeLayout(false);
-            this.ExpansionAbout4Panel.PerformLayout();
+            this.tabControl.ResumeLayout(false);
+            this.tabManageLights.ResumeLayout(false);
+            this.tabManageLights.PerformLayout();
+            this.tabMode.ResumeLayout(false);
+            this.tabStaticMode.ResumeLayout(false);
+            this.tabStaticMode.PerformLayout();
+            this.colorPickerMode.ResumeLayout(false);
+            this.tabHexagon.ResumeLayout(false);
+            this.tabWheel.ResumeLayout(false);
+            this.tabColorCode.ResumeLayout(false);
+            this.tabColorCode.PerformLayout();
+            this.tabAnimationMode.ResumeLayout(false);
+            this.tabAnimationMode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackAnimationSpeed)).EndInit();
+            this.tabAbout.ResumeLayout(false);
+            this.panelAbout.ResumeLayout(false);
+            this.panelAbout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
+            this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialTabControl TabControl;
-        private System.Windows.Forms.TabPage TabManageLights;
-        private System.Windows.Forms.TabPage TabAbout;
-        private MaterialSkin.Controls.MaterialComboBox ModeSelector;
-        private System.Windows.Forms.TabControl ModeTabControl;
-        private System.Windows.Forms.TabPage TabStaticMode;
-        private System.Windows.Forms.TabPage TabAnimationMode;
-        private MaterialSkin.Controls.MaterialTabControl ColorPickerMode;
-        private System.Windows.Forms.TabPage TabHexagon;
-        private System.Windows.Forms.TabPage TabWheel;
-        private System.Windows.Forms.TabPage TabColorCode;
-        private MaterialSkin.Controls.MaterialTabSelector TabSelector;
-        private System.Windows.Forms.Label CurrentColor;
-        private MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon ColorHexagon;
-        private MechanikaDesign.WinForms.UI.ColorPicker.ColorWheel ColorWheel;
-        private MaterialSkin.Controls.MaterialTextBox2 ColorRedCode;
-        private MaterialSkin.Controls.MaterialLabel ColorRedLabel;
-        private MaterialSkin.Controls.MaterialTextBox2 ColorGreenCode;
-        private MaterialSkin.Controls.MaterialTextBox2 ColorBlueCode;
-        private MaterialSkin.Controls.MaterialDivider MaterialDivider;
-        private MaterialSkin.Controls.MaterialTextBox2 HexColorTextbox;
-        private MaterialSkin.Controls.MaterialLabel ColorHexLabel;
-        private MaterialSkin.Controls.MaterialLabel CurrentLabel;
-        private MaterialSkin.Controls.MaterialSwitch AutoSaveSwitch;
-        private MaterialSkin.Controls.MaterialButton SaveButton;
-        private MaterialSkin.Controls.MaterialSlider Brightness;
-        private System.Windows.Forms.Timer ProtectionLoop;
-        private System.Windows.Forms.NotifyIcon NotifyIcon;
-        private System.Windows.Forms.Timer WorkBackground;
-        private MaterialSkin.Controls.MaterialSlider AnimationSpeed;
-        private MaterialSkin.Controls.MaterialComboBox AnimationSelector;
-        private System.ComponentModel.BackgroundWorker CheckAnimation;
-        private MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon ColorFlashHexagon;
-        private MaterialSkin.Controls.MaterialCheckbox RunAtStartup;
-        private System.Windows.Forms.Timer Breathing;
-        private MaterialSkin.Controls.MaterialSlider BrightnessBreathing;
-        private MaterialSkin.Controls.MaterialExpansionPanel ExpansionAbout4Panel;
-        private System.Windows.Forms.PictureBox Logo;
-        private MaterialSkin.Controls.MaterialLabel AboutLabel;
-        private System.Windows.Forms.Label DeveloperLabel;
+        private MaterialSkin.Controls.MaterialTabControl tabControl;
+        private System.Windows.Forms.TabPage tabManageLights;
+        private System.Windows.Forms.TabPage tabAbout;
+        private MaterialSkin.Controls.MaterialComboBox txtModeSelector;
+        private System.Windows.Forms.TabControl tabMode;
+        private System.Windows.Forms.TabPage tabStaticMode;
+        private MaterialSkin.Controls.MaterialTabControl colorPickerMode;
+        private System.Windows.Forms.TabPage tabHexagon;
+        private System.Windows.Forms.TabPage tabWheel;
+        private System.Windows.Forms.TabPage tabColorCode;
+        private MaterialSkin.Controls.MaterialTabSelector tabSelector;
+        private System.Windows.Forms.Label lblCurrentColor;
+        private MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon colorHexagon;
+        private MechanikaDesign.WinForms.UI.ColorPicker.ColorWheel colorWheel;
+        private MaterialSkin.Controls.MaterialTextBox2 txtColorRedCode;
+        private MaterialSkin.Controls.MaterialLabel lblColorRed;
+        private MaterialSkin.Controls.MaterialTextBox2 txtColorGreenCode;
+        private MaterialSkin.Controls.MaterialTextBox2 txtColorBlueCode;
+        private MaterialSkin.Controls.MaterialDivider materialDivider;
+        private MaterialSkin.Controls.MaterialTextBox2 txtHexColor;
+        private MaterialSkin.Controls.MaterialLabel lblColorHex;
+        private MaterialSkin.Controls.MaterialLabel lblCurrent;
+        private MaterialSkin.Controls.MaterialSlider sliderBrightness;
+        private MaterialSkin.Controls.MaterialComboBox txtAnimationSelector;
+        private MaterialSkin.Controls.MaterialExpansionPanel panelAbout;
+        private System.Windows.Forms.PictureBox imgLogo;
+        private MaterialSkin.Controls.MaterialLabel lblAbout;
+        private System.Windows.Forms.Label lblDeveloper;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private MaterialSkin.Controls.MaterialCheckbox checkRunStartup;
+        private MaterialSkin.Controls.MaterialCheckbox checkRunBackground;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuExit;
+        private MaterialSkin.Controls.MaterialSwitch switchKeyboardLight;
+        private System.Windows.Forms.TabPage tabAnimationMode;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.TrackBar trackAnimationSpeed;
+        private MechanikaDesign.WinForms.UI.ColorPicker.ColorHexagon colorCustomHexagon;
+        private MaterialSkin.Controls.MaterialCheckbox checkDefaultSettings;
     }
 }

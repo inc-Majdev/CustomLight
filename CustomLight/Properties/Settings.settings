@@ -2,17 +2,26 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CustomLight.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="RunAtStartup" Type="System.Boolean" Scope="User">
+    <Setting Name="RunStartup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Color" Type="System.String" Scope="User">
-      <Value Profile="(Default)">#FFFFFF</Value>
+    <Setting Name="RunBackground" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Color2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">#FFFFFF</Value>
+    <Setting Name="CurrentColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="AnimationSpeed" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">5</Value>
+    <Setting Name="CurrentSpeed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="CurrentMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Static</Value>
+    </Setting>
+    <Setting Name="CurrentAnimationMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CurrentAnimationColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

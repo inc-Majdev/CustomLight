@@ -12,7 +12,7 @@ namespace CustomLight.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,48 +26,82 @@ namespace CustomLight.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool RunAtStartup {
+        public bool RunStartup {
             get {
-                return ((bool)(this["RunAtStartup"]));
+                return ((bool)(this["RunStartup"]));
             }
             set {
-                this["RunAtStartup"] = value;
+                this["RunStartup"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFFFFF")]
-        public string Color {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RunBackground {
             get {
-                return ((string)(this["Color"]));
+                return ((bool)(this["RunBackground"]));
             }
             set {
-                this["Color"] = value;
+                this["RunBackground"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFFFFF")]
-        public string Color2 {
+        public global::System.Drawing.Color CurrentColor {
             get {
-                return ((string)(this["Color2"]));
+                return ((global::System.Drawing.Color)(this["CurrentColor"]));
             }
             set {
-                this["Color2"] = value;
+                this["CurrentColor"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public int AnimationSpeed {
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int CurrentSpeed {
             get {
-                return ((int)(this["AnimationSpeed"]));
+                return ((int)(this["CurrentSpeed"]));
             }
             set {
-                this["AnimationSpeed"] = value;
+                this["CurrentSpeed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Static")]
+        public string CurrentMode {
+            get {
+                return ((string)(this["CurrentMode"]));
+            }
+            set {
+                this["CurrentMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CurrentAnimationMode {
+            get {
+                return ((string)(this["CurrentAnimationMode"]));
+            }
+            set {
+                this["CurrentAnimationMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CurrentAnimationColor {
+            get {
+                return ((global::System.Drawing.Color)(this["CurrentAnimationColor"]));
+            }
+            set {
+                this["CurrentAnimationColor"] = value;
             }
         }
     }

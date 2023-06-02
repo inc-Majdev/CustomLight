@@ -19,6 +19,8 @@ Software Language : C# (.Net Framework 4.8)
 ![Screenshot](https://raw.githubusercontent.com/inc-Majdev/CustomLight/main/Screenshots/Screenshot_6.png)
 ![Screenshot](https://raw.githubusercontent.com/inc-Majdev/CustomLight/main/Screenshots/Screenshot_7.png)
 ![Screenshot](https://raw.githubusercontent.com/inc-Majdev/CustomLight/main/Screenshots/Screenshot_8.png)
+![Screenshot](https://raw.githubusercontent.com/inc-Majdev/CustomLight/main/Screenshots/Screenshot_9.png)
+![Screenshot](https://raw.githubusercontent.com/inc-Majdev/CustomLight/main/Screenshots/Screenshot_10.png)
 
 ## Built With
 * [MaterialSkin](https://github.com/leocb/MaterialSkin) - Theming .NET WinForms, C# or VB.Net, to Google's Material Design Principles.

@@ -43,13 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animations\ColorBreathing.cs" />
-    <Compile Include="Animations\ColorFlash.cs" />
-    <Compile Include="Animations\RandomColor.cs" />
-    <Compile Include="Animations\RandomFlash.cs" />
-    <Compile Include="Animations\Rainbow.cs" />
     <Compile Include="App\Program.cs" />
     <Compile Include="InsydeDCHU.cs" />
+    <Compile Include="Library\ColorAnimationGenerator.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
