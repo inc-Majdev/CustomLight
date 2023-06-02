@@ -1,4 +1,4 @@
-# CustomLight
+# Custom Light
 Forget the old-fashioned software the manufacturer gave you to manage the lights and discover the magic of lights with us!
 Software Language : C# (.Net Framework 4.8)
 
